@@ -98,11 +98,11 @@ return;
 }
 console.log(reverse1(3,5,6,7));
 
-function scoreExams(arrExam){
+function (scoreExams(studentAnswers, correctAnswers){
 
     let score =0;
-    for(let item of arrExam){
-        if(item.answer === item.key){
+    for(let item of studentAnswers){
+        if(item.studentAnswers === item.correctAnswers){
             score ++;
 
     
