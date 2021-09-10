@@ -1,3 +1,6 @@
+
+
+
 //Q1.  Sum numbers from the visitor
 //create a script that prompts the visitor to enter two numbers 
 //and then shows their sum
@@ -171,4 +174,45 @@ styles.unshift("Rap","Reggae");
 
  }
  arr[4]();
- 
+
+
+ //Q13
+ //Sum input numbers
+ function sumInput(){
+     let num = [];
+     while(true){
+         let input = prompt("A number please?, 0 ");
+         if(input == null || isInfinite(input)) break;
+         num.push(+input);
+     }
+ }
+
+//Q14.
+function gerMaxSubSum(arr){
+    let maxSum = 0;
+    for(let i=0;i<arr.lengrth; i++){
+        let suFixedStart = 0;
+
+        for(let j =1; j<arr.length; j++){
+            suFixedStart +=arr[j];
+            maxSum = math.max(maxSum , suFixedStart);
+
+        }
+    }
+    return maxSum
+}
+console.log(gerMaxSubSum([-1,2,3,-9])) // 5;
+
+//Q15.
+// Section: Array methods
+// • Translate border-left-width to borderLeftWidth
+function camelize(str) {
+     return str
+    .split('-') // splits 'my-long-word' into array ['my', 'long', 'word'] 
+    map(
+    // capitalizes first letters of all array items except the first one
+    // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
+    (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join('');  // joins ['my', 'Long', 'Word'] into 'myLongWord'
+
